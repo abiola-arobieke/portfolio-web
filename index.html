@@ -10,14 +10,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body>
+  <body class="bg-page-color" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+   
     <!-- header section -->
     <section>
       <header>
         <div>
-          <nav>
-            <a>My logo</a>
+          <nav class="navbar navbar-expand-sm py-4 px-5 bg-white navbar-white fixed-top">
+            <div class="container-fluid mx-3 px-5">
+                <a class="navbar-brand light-blue" id="logo" href="#">Arb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end
+                " id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link text-dark-color font-15 href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-dark-color font-15" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-dark-color font-15" href="#contact">Contact</a>
+                    </li>    
+                  </ul>
+                </div>
+              </div>
+            <!-- <a href="#">My logo</a>
             <div>
               <ul>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -28,18 +51,18 @@
                 src="./images/menu-icon.png"
                 alt="menu"
               />
-            </div>
+            </div> -->
           </nav>
         </div>
       </header>
-      <section>
+      <section class="d-flex flex-column bg-img-header headline bg-white mt-5">
         <div>
-          <h1>
+          <h1 class="text-grey-color" id="header-title">
             I’m Abiola <br />
             <span>Glad to see you!</span>
           </h1>
         </div>
-        <div>
+        <div class="text-grey-color description">
           <p>
             I'm a full-stack developer! I can help you build an interactive and
             fully responsive website. My designs are top notches. A typical
@@ -49,32 +72,32 @@
           </p>
         </div>
 
-        <div>
-          <div>LET’S CONNECT</div>
-          <ul>
-            <li>
-              <a href="https://twitter.com/abiola_arobieke">
-                <img src="./images/twitter-icon.png" alt="twitter-icon" />
+        <div class="social">
+          <div class="intro text-light-blue">LET’S CONNECT</div>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/abiola_arobieke">
+                <img class="social-icon" src="./images/twitter-icon.png" alt="twitter-icon" />
               </a>
             </li>
-            <li>
-              <a href="https://linkedin.com/in/abiola-arobieke">
-                <img src="./images/linkedin-icon.png" alt="linkedin-icon" />
+            <li class="nav-item">
+              <a class="nav-link" href="https://linkedin.com/in/abiola-arobieke">
+                <img class="social-icon" src="./images/linkedin-icon.png" alt="linkedin-icon" />
               </a>
             </li>
-            <li>
-              <a href="#"
-                ><img src="./images/medium-icon.png" alt="medium-icon"
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img class="social-icon" src="./images/medium-icon.png" alt="medium-icon"
               /></a>
             </li>
-            <li>
-              <a href="https://github.com/abiola-arobieke">
-                <img src="./images/github-icon.png" alt="github-icon" />
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/abiola-arobieke">
+                <img class="social-icon" src="./images/github-icon.png" alt="github-icon" />
               </a>
             </li>
-            <li>
-              <a href="#"
-                ><img src="./images/hand-icon.png" alt="hand-icon"
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img class="social-icon" src="./images/hand-icon.png" alt="hand-icon"
               /></a>
             </li>
           </ul>
@@ -86,115 +109,118 @@
     <!-- projects section -->
     <section id="portfolio">
       <section>
-        <div>
-          <div>
-            <img src="./images/project1.png" alt="Tonic" />
+        <div class="row bg-white p-4 rounded-5" id="margin-8">
+          <div class="col-md-6 p-0">
+            <img class="w-100 h-auto" src="./images/project1.png" alt="Tonic"/>
           </div>
-          <div>
-            <h2>Tonic</h2>
-            <ul>
-              <li>Facebook</li>
+          <div class="col-md-6 ps-5 pt-3">
+            <h2 class="text-light-grey font-40 fw-700">Tonic</h2>
+            <ul class="d-flex space-x-24 p-highlight">
+              <li class="text-uppercase">FACEBOOK</li>
               <li>Full Stack</li>
               <li>2015</li>
             </ul>
-            <p>
+            <p class="font-16 text-dark-color mb-3">
               Experimental content creation feature that allows users to add to
               an existing story over the course of a day without spamming their
               friends.
             </p>
-            <ul>
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
+            <ul class="d-flex space-x-1 no-pad list-style-n">
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">html</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">css</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">javascript</li>
             </ul>
-            <button type="button">See project</button>
+            <button class="btn-action mt-40" type="button">See project</button>
           </div>
         </div>
       </section>
       <section>
-        <div>
-          <div>
+        <div class="row bg-white p-4 rounded-5" id="margin-8">
+          <div class="col-md-6 p-0">
             <img
+              class="w-100 h-auto"
               src="./images/project2.png"
               alt="Multi-Post Stories"
             />
           </div>
-          <div>
-            <h2>Multi-Post Stories</h2>
-            <ul">
-              <li>Facebook</li>
+          <div class="col-md-6 ps-5 pt-3">
+            <h2 class="text-light-grey font-40 fw-700">Multi-Post Stories</h2>
+            <ul class="d-flex space-x-24 p-highlight">
+              <li class="text-uppercase">Facebook</li>
               <li>Full Stack</li>
               <li>2015</li>
             </ul>
-            <p>
+            <p class="font-16 text-dark-color mb-3">
               Experimental content creation feature that allows users to add to
               an existing story over the course of a day without spamming their
               friends.
             </p>
-            <ul>
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
+            <ul class="d-flex space-x-1 no-pad list-style-n">
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">html</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">css</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">javascript</li>
             </ul>
-            <button>See project</button>
+            <button class="btn-action mt-40">See project</button>
           </div>
         </div>
       </section>
       <section>
-        <div>
-          <div>
+        <div class="row bg-white p-4 rounded-5" id="margin-8">
+          <div class="col-md-6 p-0">
             <img
+              class="w-100 h-auto"
               src="./images/project3.png"
               alt="Coffee Shop"
             />
           </div>
-          <div>
-            <h2>Coffee Shop</h2>
-            <ul>
-              <li>Facebook</li>
+          <div class="col-md-6 ps-5 pt-3">
+            <h2 class="text-light-grey font-40 fw-700">Coffee Shop</h2>
+            <ul class="d-flex space-x-24 p-highlight">
+              <li class="text-uppercase">Facebook</li>
               <li>Full Stack</li>
               <li>2015</li>
             </ul>
-            <p>
+            <p class="font-16 text-dark-color mb-3">
               Experimental content creation feature that allows users to add to
               an existing story over the course of a day without spamming their
               friends.
             </p>
-            <ul >
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
+            <ul class="d-flex space-x-1 no-pad list-style-n">
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">html</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">css</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">javascript</li>
             </ul>
-            <button  type="button">See project</button>
+            <button class="btn-action mt-40" type="button">See project</button>
           </div>
         </div>
       </section>
       <section>
-        <div>
-          <div>
+        <div class="row bg-white p-4 rounded-5" id="margin-8">
+          <div class="col-md-6 p-0">
             <img
+              class="w-100 h-auto"
               src="./images/project4.png"
               alt="Tax Calculator"
             />
           </div>
-          <div>
-            <h2>Tax Calculator</h2>
-            <ul>
-              <li>Facebook</li>
+          <div class="col-md-6 ps-5 pt-3">
+            <h2 class="text-light-grey font-40 fw-700">Tax Calculator</h2>
+            <ul class="d-flex space-x-24 p-highlight">
+              <li class="text-uppercase">Facebook</li>
               <li>Full Stack</li>
               <li>2015</li>
             </ul>
-            <p>
+            <p class="font-16 text-dark-color mb-3">
               Experimental content creation feature that allows users to add to
               an existing story over the course of a day without spamming their
               friends.
             </p>
-            <ul>
-              <li>html</li>
-              <li>css</li>
-              <li>javascript</li>
+            <ul class="d-flex space-x-1 no-pad list-style-n">
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">html</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">css</li>
+              <li class="rounded-pill bg-pill text-light-blue py-1 px-3 font-12">javascript</li>
             </ul>
-            <button type="button">See project</button>
+            <button class="btn-action mt-40" type="button">See project</button>
           </div>
         </div>
       </section>
@@ -342,5 +368,7 @@
       </footer>
     </section>
     <!-- end of about and contact -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   </body>
 </html>
